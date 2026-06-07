@@ -1,3 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
 :root {
     --light-color: #F5F5F7;
     --dark-color: #221F20;
@@ -20,22 +52,13 @@
 }
 
 *::selection {
-    background-color: #000;
+    background-color: #626262;
     color: #fff;
 }
 
 html {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
-}
-
-ul,
-h1,
-h2,
-h3 {
-    margin-block-end: 0;
-    margin-block-start: 0;
-    padding-inline-start: 0;
 }
 
 .container {
@@ -46,17 +69,15 @@ h3 {
     position: relative;
     min-height: 100vh;
     padding-top: 75px;
-    background: url('../img/bg_main.jpg') center center / cover no-repeat;
-}
+    background: #000000 url('../img/bg_main.jpg') center center / cover no-repeat;
 
-@media screen and (max-width:768px) {
-    .promo {
-        background-image: url('../img/bg_main_table.jpg');
+    @media screen and (max-width: 768px) {
+        & {
+            background-image: url("../img/bg_main_tablet.jpg");
+        }
     }
-}
 
-@media screen and (max-width:576px) {
-    .promo {
+    @media screen and (max-width: 576px) {
         min-height: 500px;
         padding-top: 50px;
     }
@@ -493,6 +514,7 @@ h3 {
 .foto4 {
     grid-row: 1/3;
     grid-column: 4/5;
+    height: 100%;
 }
 
 .foto6 {
